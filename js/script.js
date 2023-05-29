@@ -32,7 +32,6 @@ for (let i = 0; i < teamMembers.length; i++){
 
 // Bonus 1
 
-let i=1
 function imageToString (i){
     firstName = teamMembers[i].firstName.toLowerCase();
     lastName = teamMembers[i].lastName.toLowerCase();
