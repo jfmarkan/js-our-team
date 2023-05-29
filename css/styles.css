@@ -1,0 +1,23 @@
+body{
+    font-family: 'Barlow', sans-serif;
+}
+
+h2{
+    text-transform: uppercase;
+    font-size: 1.5rem;
+
+}
+
+h4{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.picture{
+    width: 100%
+}
+
+.team-member-name{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
