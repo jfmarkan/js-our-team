@@ -1,3 +1,4 @@
+// Milestone 0
 const teamMembers = [
     {firstName:'Wayne', lastName: 'Barnett', position:'Founder & CEO', img:'wayne-barnett-founder-ceo.jpg'},
     {firstName:'Angela', lastName: 'Caroll', position:'Chief Editor', img:'angela-caroll-chief-editor.jpg'},
@@ -7,9 +8,20 @@ const teamMembers = [
     {firstName:'Barbara', lastName: 'Ramos', position:'Graphic Designer', img:'barbara-ramos-graphic-designer.jpg'},
 ];
 
+// Milestone 1
 for (let i = 0; i < teamMembers.length; i++){
     console.log('Name: ' + teamMembers[i].firstName + " " + teamMembers[i].lastName);
     console.log('position: ' + teamMembers[i].position);
     console.log('img: ' + teamMembers[i].img)
     console.log('-----')
-    }
+}
+
+// Milestone 2
+const divElement = document.querySelector('div');
+
+for (let i = 0; i < teamMembers.length; i++){
+    const div = document.createElement('div');
+    div.innerHTML = 'Name: ' + teamMembers[i].firstName + ' ' + teamMembers[i].lastName + '<br> ' + 'position: ' + teamMembers[i].position + '<br>' +  'img: ' + teamMembers[i].img;
+    divElement.append(div);
+    div.classList.add('my-2')
+}
