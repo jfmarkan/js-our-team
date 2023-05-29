@@ -1,3 +1,6 @@
+let imgFolder = './img/'
+let extension = '.jpg'
+
 // Milestone 0
 const teamMembers = [
     {firstName:'Wayne', lastName: 'Barnett', position:'Founder & CEO', img:'wayne-barnett-founder-ceo.jpg'},
@@ -21,7 +24,20 @@ const divElement = document.querySelector('div');
 
 for (let i = 0; i < teamMembers.length; i++){
     const div = document.createElement('div');
-    div.innerHTML = 'Name: ' + teamMembers[i].firstName + ' ' + teamMembers[i].lastName + '<br> ' + 'position: ' + teamMembers[i].position + '<br>' +  'img: ' + teamMembers[i].img;
+    // div.innerHTML = 'Name: ' + teamMembers[i].firstName + ' ' + teamMembers[i].lastName + '<br> ' + 'position: ' + teamMembers[i].position + '<br>' +  'img: ' + teamMembers[i].img;
+    div.innerHTML = 'Name: ' + teamMembers[i].firstName + ' ' + teamMembers[i].lastName + '<br> ' + 'position: ' + teamMembers[i].position + '<br>' +  'img: ' + imageToString(i);
     divElement.append(div);
     div.classList.add('my-2')
 }
+
+// Bonus 1
+
+let i=1
+function imageToString (i){
+    firstName = teamMembers[i].firstName.toLowerCase();
+    lastName = teamMembers[i].lastName.toLowerCase();
+    position = teamMembers[i].position.replace(/[^a-zA-Z0-9]/g,'-').toLowerCase();
+
+    return imgFolder + firstName +'-'+ lastName +'-'+ position + extension;
+}
+    
